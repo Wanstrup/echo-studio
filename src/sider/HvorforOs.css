@@ -1,0 +1,97 @@
+/* 🎯 HvorforOs.css – layout only */
+
+.why-us-container {
+    padding: 20px;
+}
+
+.why-us-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: column; /* Standard for at have tekst og billede stablet vertikalt */
+}
+
+.why-us-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.why-us-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.last-section {
+    display: flex;
+    flex-direction: column; /* Standard for at have billede og tekst vertikalt stablet */
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.last-section img {
+    max-width: 100%;  /* Sørger for at billedet fylder bredden på containeren */
+    height: auto; /* Holder højden proportional til bredden */
+    border-radius: 8px;
+   
+}
+
+/* Mobile enheder */
+@media (max-width: 600px) {
+    .last-section img {
+        width: 100%;  /* På mobile enheder fylder billedet hele bredden */
+        max-width: 100%; /* Sørg for at billedet ikke overstiger containerens bredde */
+    }
+
+    /* Sørg for, at billede og tekst er stablet vertikalt på mobile enheder */
+    .last-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ingen ændring i rækkefølgen - billede nederst */
+}
+
+/* Tablet og desktop */
+@media (min-width: 600px) {
+    .why-us-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .why-us-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .why-us-section p {
+        font-size: 1.1rem;
+    }
+
+    /* Gør billederne større på større skærme */
+    .last-section img {
+        width: 80%;  /* Billedet fylder 80% af bredden på sektionen */
+        max-width: 600px; /* Sæt en maksimal størrelse på billedet */
+    }
+
+    .last-section {
+        flex-direction: column; /* Sørg for at billede og tekst er stablet vertikalt */
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.image-section {
+    margin-top: 30px;      /* Placer billedet med lidt afstand fra de tidligere sektioner */
+    text-align: center;    /* Centrer billedet horisontalt */
+  }
+  
+  .image-section img {
+    width: 100%;           /* Billedet skal fylde hele bredden på containeren */
+    max-width: 800px;      /* Maksimal bredde på billedet */
+    height: auto;          /* Beholder billedets proportionalitet */
+    border-radius: 8px;    /* Hvis du vil have rundede hjørner på billedet */
+    
+    margin: 0 auto;        /* Gør det centreret hvis billedet ikke fylder hele bredden */
+  }

@@ -1,0 +1,191 @@
+/* 🎨 Farve- og spacing-variabler */
+:root {
+  --primary-color: #fcf6dc;
+  --secondary-color: #2b285e;
+  --dark-bg: #2b285e;
+  --dark-text: #fcf6dc;
+  --light-bg: #ffffff;
+  --light-text: #213547;
+
+  --footer-border: #2b285e;
+  --border-light: #2b285e;
+  --border-dark: #2b285e;
+  
+
+  --booking-btn-bg: #2b285e;
+  --booking-btn-text: #fcf6dc;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 🌙 Dark mode styling */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+
+  /* Opdaterede variabler i dark mode */
+  --footer-border: #fcf6dc;
+  --border-light: #fcf6dc;
+  --border-dark: #fcf6dc;
+  --booking-btn-bg: #fcf6dc;
+  --booking-btn-text: #2b285e;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+  color: var(--dark-text);
+}
+
+body.dark-mode a {
+  color: var(--dark-text);
+}
+
+body.dark-mode a:hover {
+  color: #66aaff;
+}
+
+/* 🚫 Reset og box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌍 Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ✍️ Typografi */
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+  color: var(--light-text);
+}
+
+/* 🔗 Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* 🖼️ Billeder */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+/* 📏 Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 var(--spacing-sm);
+  margin: 0 auto;
+}
+
+/* 📦 Sektioner */
+.section {
+  padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+.section h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 🧱 Utility spacing classes */
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+
+.p-1 { padding: var(--spacing-xs); }
+.p-2 { padding: var(--spacing-sm); }
+.p-3 { padding: var(--spacing-md); }
+
+/* === Footer border (brugt i Footer.css) === */
+.footer {
+  border-top: 3px solid var(--footer-border);
+}
+
+/* === Book nu knap og formular === */
+.booking-container {
+  border: 3px solid var(--border-dark);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  
+}
+
+.booking-form button {
+  padding: 0.75rem;
+  background-color: var(--booking-btn-bg);
+  color: var(--booking-btn-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styling for Pros and Cons */
+body.dark-mode .text-content h3 {
+  color: var(--dark-text);
+}
+
+body.dark-mode .text-content ul li {
+  color: var(--dark-text);
+}
+
+body.dark-mode .text-content ul li:before {
+  color: var(--dark-text);
+}
+
+body.dark-mode .text-content ul li span {
+  color: var(--dark-text);
+}
+
+

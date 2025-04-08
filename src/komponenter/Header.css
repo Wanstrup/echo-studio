@@ -1,0 +1,250 @@
+/* Header.css */
+header {
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header.light {
+  background-color: #fcf6dc;
+  border-bottom: 3px solid #2b285e;
+}
+
+header.dark {
+  background-color: #2b285e;
+  border-bottom: 3px solid #fcf6dc;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Desktop navigation styles */
+.desktop-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin-right: 4rem;
+}
+
+.desktop-nav li {
+  margin: 0 0.75rem;
+}
+
+.desktop-nav li a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  font-family: 'Cinzel', serif;
+}
+
+header.light .desktop-nav li a {
+  color: #2b285e;
+}
+
+header.dark .desktop-nav li a {
+  color: #e1e1e6;
+}
+
+.desktop-nav li a:hover {
+  color: #007bff;
+}
+
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #2b285e;
+  cursor: pointer;
+  z-index: 20;
+  margin-right: 3rem;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+header.light .dark-mode-toggle {
+  color: #2b285e;
+}
+
+header.dark .dark-mode-toggle {
+  color: #fcf6dc;
+}
+
+/* Close button (X) styling - hide by default on desktop */
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 40;
+}
+
+/* Slide-in menu - hide by default on desktop */
+.slide-in-menu {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hide desktop navigation */
+  .desktop-nav {
+    display: none;
+  }
+  
+  /* Show the burger menu on mobile */
+  .burger-menu {
+    display: block;
+  }
+
+  /* Hide burger menu when slide-in menu is open */
+  .slide-in-menu.open ~ .burger-menu,
+  .slide-in-menu.open ~ .dark-mode-toggle {
+    display: none;
+  }
+
+  /* Slide-in menu base styles */
+  .slide-in-menu {
+    position: fixed;
+    top: -100%; 
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease;
+    z-index: 30;
+  }
+
+  /* When the menu is open, slide it down */
+  .slide-in-menu.open {
+    top: 0;
+  }
+
+  /* Light mode slide-in menu */
+  header.light .slide-in-menu {
+    background-color: #fcf6dc;
+  }
+
+  /* Dark mode slide-in menu */
+  header.dark .slide-in-menu {
+    background-color: #2b285e;
+  }
+
+  /* Menu items styles - explicitly set column for mobile */
+  .slide-in-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Cinzel', serif;
+  }
+
+  .slide-in-menu li {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+  }
+
+  /* Light mode link styles */
+  header.light .slide-in-menu li a {
+    font-size: 1.5rem;
+    color: #2b285e;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: bold;
+  }
+
+  /* Dark mode link styles */
+  header.dark .slide-in-menu li a {
+    font-size: 1.5rem;
+    color: #fcf6dc;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: bold;
+  }
+
+  /* Link hover styles */
+  .slide-in-menu li a:hover {
+    color: #007bff;
+  }
+
+  /* Close button styles for light mode */
+  header.light .close-btn {
+    color: #2b285e;
+  }
+
+  /* Close button styles for dark mode */
+  header.dark .close-btn {
+    color: #fcf6dc;
+  }
+
+  /* Only show close button on mobile when menu is open */
+  .slide-in-menu.open .close-btn {
+    display: block;
+  }
+}
+
+/* Dark mode styles for mobile menu */
+header.dark .burger-menu {
+  color: #fcf6dc;
+}
+
+header.light .burger-menu {
+  color: #2b285e;
+}
+
+
+

@@ -1,0 +1,73 @@
+/* OmOs.css */
+
+/* Importer Cinzel font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+/* Mobile first styling */
+.omOs-section {
+  display: flex;
+  flex-direction: column; /* Sørger for, at tekst og billede er stablet vertikalt */
+  padding: 16px;
+  text-align: center;
+}
+
+.text-container {
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; /* Centrerer tekst-containeren */
+}
+
+.text-container h2 {
+  font-family: 'Cinzel', serif;  /* Bruger Cinzel font til overskriften */
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: center; /* Centrerer overskriften */
+}
+
+/* For Vision, Mission og Passion i p-tags */
+.text-container p span {
+  font-family: 'Cinzel', serif; /* Bruger Cinzel font */
+  font-weight: bold;  /* Sætter tekst til fed */
+}
+
+.text-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Justering for billeder */
+.image-container img {
+  width: 100%; /* Gør billedet responsivt, så det fylder hele bredden af containeren */
+  height: auto; /* Beholder proportionerne */
+  display: block;
+  margin: 16px auto; /* Tilføjer lidt afstand mellem billede og tekst */
+  border-radius: 8px; /* Tilføjer lidt runding til billedets kanter */
+}
+
+/* Media queries for større skærme */
+@media (min-width: 768px) {
+  .omOs-section {
+    flex-direction: column; /* Sørger for at tekst og billede stadig er stablet vertikalt på større skærme */
+    text-align: center;
+  }
+
+  .text-container h2 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 1.125rem;
+    max-width: 800px;
+  }
+
+  .image-container img {
+    width: 60%; /* På større skærme kan billedet fylde 60% af containerens bredde */
+    max-width: 750px; /* Max width for billede */
+    margin-top: 16px; /* Lægger lidt afstand mellem billede og tekst */
+  }
+}
+

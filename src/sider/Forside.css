@@ -1,0 +1,196 @@
+/* === GRID SEKTIONER === */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.grid-section .image-content,
+.grid-section .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.grid-section .image-content img {
+    width: 750px;
+    max-height: 750px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: none; 
+}
+
+/* På mobilskærme - Billeder vises først */
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-section .image-content {
+        order: -1;
+    }
+
+    .grid-section .image-content img {
+        margin-top: 1rem;
+    }
+}
+
+.section-first,
+.section-second,
+.section-third,
+.section-fourth {
+    padding: 2rem 0;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.full-width-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin: -10rem auto 1rem auto;
+}
+
+/* === SLIDESHOW SEKTION === */
+.slideshow-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.slideshow-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+/* === SLIDESHOW === */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.slide-title {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* === Pros and Cons === */
+.text-content h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.text-content ul li {
+    list-style-type: disc; /* Standard bullet point */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+
+/* === Responsiv justering === */
+@media (max-width: 768px) {
+    .text-content ul li {
+        font-size: 0.95rem; 
+    }
+
+    .text-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.project-link-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    background-color: #2b285e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-link-btn:hover {
+    background-color: #1f1a41;
+}
+
+
+  
