@@ -18,7 +18,7 @@ const OmOs = () => {
         </p>
       </div>
       <div className="image-container">
-        <img src="src/assets/omos1.webp" alt="Om os billede" />
+        <img src="src/assets/bil5.webp" alt="Om os billede" />
       </div>
     </section>
   );

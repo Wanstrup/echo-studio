@@ -1,8 +1,8 @@
 // Forside.jsx
 import React from 'react';
-import image1 from '../assets/forside1.webp';  // Sørg for at opdatere stierne til dine billeder
-import image2 from '../assets/forside2.webp';
-import image3 from '../assets/forside3.webp';
+import image1 from '../assets/bil9.webp';  // Sørg for at opdatere stierne til dine billeder
+import image2 from '../assets/bil10.webp';
+import image3 from '../assets/bil6.webp';
 import image4 from '../assets/image002.gif';  // Nyt billede til sektion 4
 import Slideshow from '../komponenter/Slideshow';
 import './Forside.css';

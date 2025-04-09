@@ -27,7 +27,7 @@ const HvorforOs = () => {
 
       {/* Sektion for billede */}
       <section className="image-section">
-        <img src="/src/assets/image001.webp" alt="Personlig Service" />
+        <img src="/src/assets/bil8.webp" alt="Personlig Service" />
       </section>
     </div>
   );
