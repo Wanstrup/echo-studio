@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import image1Light from '../assets/bil9.webp';
 import image2Light from '../assets/bil10.webp';
 import image3Light from '../assets/bil6.webp';
-import image4Light from '../assets/image002.gif';
+import image4Light from '../assets/echogiffy.gif';
 
 // Dark mode images - replace these with your actual dark mode image paths
 import image1Dark from '../assets/bil1.webp';  // Replace with your actual dark image
 import image2Dark from '../assets/bil2.webp'; // Replace with your actual dark image
 import image3Dark from '../assets/bil3.webp';  // Replace with your actual dark image
-import image4Dark from '../assets/image002.gif'; // Replace with your actual dark image
+import image4Dark from '../assets/echogiffy.gif'; // Replace with your actual dark image
 
 import Slideshow from '../komponenter/Slideshow';
 import './Forside.css';

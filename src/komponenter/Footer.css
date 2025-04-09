@@ -7,39 +7,78 @@
   position: relative;
   bottom: 0;
   border-top: 3px solid var(--footer-border-light); /* Brug variabel til borderfarve */
+  background-color: var(--footer-background); /* Baggrundsfarve baseret på tema */
+  display: flex;
+  justify-content: space-between; /* Sørger for, at footerens indhold er på modsatte sider */
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; /* For at sikre, at teksten i footeren er centreret */
 }
 
 /* Footer content styling */
 .footer-content {
+  display: flex;
+  justify-content: space-between; /* Placerer indholdet på modsatte sider */
+  align-items: center;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 1rem;
 }
 
-.footer p {
+.footer-contact,
+.footer-copyright {
+  font-size: 0.9rem;
+  text-align: left;
   margin: 0;
 }
 
 .footer-contact {
-  margin-top: 1rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  flex: 1;
 }
 
-/* Responsive design for small screens */
+.footer-copyright {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-image {
+  text-align: center;
+  flex: 1;
+}
+
+/* For logoets billede */
+.footer-logo {
+  max-width: 150px;  /* Begræns logoets størrelse */
+  width: 100%; /* Gør billedet responsivt */
+  height: auto; /* Sørg for, at billedet forbliver proportionelt */
+  object-fit: contain; /* For at sikre, at billedet holder sig indenfor containerens størrelse */
+  margin: 0 auto; /* Centrerer billedet */
+}
+
+/* Justering af marginer og padding */
+.footer-contact p,
+.footer-copyright p {
+  margin: 0;
+}
+
+.footer-image img {
+  max-width: 75px;  /* Gør billedet responsivt, så det ikke overskrider containerens bredde */
+  height: auto;
+}
+
+/* Responsivt design for små skærme */
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    text-align: center;
   }
 
-  .footer-links {
-      margin-top: 1rem;
+  .footer-contact,
+  .footer-copyright {
+    margin: 1rem 0;
+  }
+
+  .footer-logo {
+    max-width: 120px; /* Justering for små skærme */
   }
 }
-
-  
