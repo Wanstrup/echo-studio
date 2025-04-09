@@ -69,14 +69,14 @@ function Main() {
           </p>
         </div>
         <div className="image-content">
-          <img src={image1} alt="Ekspertise og erfaring" />
+          <img src={image1} alt="Ekspertise og erfaring" loading="lazy"/>
         </div>
       </section>
 
       {/* Remaining sections with updated image references */}
       <section className="grid-section section-second">
         <div className="image-content">
-          <img src={image2} alt="Innovative løsninger" />
+          <img src={image2} alt="Innovative løsninger" loading="lazy" />
         </div>
         <div className="text-content">
           <h2>Hvorfor er det vigtigt?</h2>
@@ -86,7 +86,7 @@ function Main() {
         </div>
       </section>
 
-      <section className="grid-section section-third">
+      <section className="grid-section section-third" loading="lazy">
         <div className="text-content">
           <h2>Hvilke tiltag vælger vi og hvorfor fokuserer vi på det?</h2>
 
@@ -110,12 +110,12 @@ function Main() {
           </ul>
         </div>
         <div className="image-content">
-          <img src={image3} alt="Kundefokus og resultater" />
+          <img src={image3} alt="Kundefokus og resultater" loading="lazy" />
         </div>
       </section>
 
       <section className="grid-section section-fourth">
-        <img src={image4} alt="Echo Badge" className="full-width-gif" />
+        <img src={image4} alt="Echo Badge" className="full-width-gif" loading="lazy" />
         <div className="text-content">
           <h2>Echo Studio Badge</h2>
           <p>Hos Echo Studio designer vi ikke bare flotte og funktionelle websites – vi tænker også på miljøet. Derfor tilbyder vi vores "Bæredygtigt Webdesign"-badge til alle de virksomheder, vi samarbejder med. Badget viser jeres kunder, at I har valgt en website, der er designet med omtanke for miljøet. Det betyder, at jeres website er optimeret til lavere energiforbrug, hurtigere indlæsningstider og mere bæredygtige digitale løsninger. Ved at integrere vores badge på jeres website sender I et klart signal om, at I tager ansvar for en grønnere digital fremtid – og inspirerer andre til at gøre det samme. </p>

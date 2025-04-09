@@ -28,7 +28,7 @@ const Header = () => {
     <header className={darkMode ? 'dark' : 'light'}>
       <nav>
         <Link to="/main" className="logo-link">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" loading="lazy"/>
         </Link>
 
         {/* Desktop Navigation */}

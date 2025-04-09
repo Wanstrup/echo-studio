@@ -110,7 +110,7 @@ h1 {
 }
 
 .slide-image {
-    width: 100%;
+    width: 400px;
     height: 300px;
     object-fit: contain;
     border-radius: 10px;
@@ -136,6 +136,7 @@ h1 {
     cursor: pointer;
     font-size: 24px;
     z-index: 10;
+    
 }
 
 .prev-btn {
@@ -144,6 +145,27 @@ h1 {
 
 .next-btn {
     right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .prev-btn {
+        left: -50px; /* Move closer to the image on larger screens */
+    }
+    
+    .next-btn {
+        right: -20px; /* Move closer to the image on larger screens */
+    }
+}
+
+/* For even larger screens, you can move them even closer */
+@media screen and (min-width: 1200px) {
+    .prev-btn {
+        left: 200px;
+    }
+    
+    .next-btn {
+        right: 200px;
+    }
 }
 
 /* === Pros and Cons === */

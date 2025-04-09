@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // Billeder til slideshowet
-import case1 from '../assets/skor-logo.webp';  // Udskift med dine egne billeder
+import case1 from '../assets/skor-logo3.webp';  // Udskift med dine egne billeder
 import case3 from '../assets/nelogo.webp';
 import case4 from '../assets/logo.webp';
 import case5 from '../assets/vwlogo.webp';

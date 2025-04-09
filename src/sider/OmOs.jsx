@@ -1,11 +1,42 @@
 // OmOs.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './OmOs.css';  // CSS fil til styling
+import lightModeImage from '../assets/bil5.webp';  // Dit nuværende billede
+import darkModeImage from '../assets/bil4.webp';  // Dit mørke billede (erstat med den korrekte sti)
 
 const OmOs = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  useEffect(() => {
+    // Tjek localStorage ved komponent-mount
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setIsDarkMode(storedDarkMode);
+    
+    // Tilføj en event listener for at opdatere når dark mode ændres
+    const handleStorageChange = () => {
+      const currentDarkMode = localStorage.getItem('darkMode') === 'true';
+      setIsDarkMode(currentDarkMode);
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    
+    // Lyt også til ændringer af body klassen
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.body.classList.contains('dark-mode'));
+    });
+    
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="omOs-section">
       <div className="text-container">
+        {/* Din eksisterende tekst */}
         <h2>Om os - Drivkraft</h2>
         <p>
           Hos Echo Studio er vi drevet af en <span>passion</span> for at skabe digitale løsninger, der ikke kun ser godt ud, men som også er funktionelle, brugervenlige og ansvarlige overfor vores planet. Vores <span>mission</span> er at hjælpe virksomheder med at opbygge en stærk digital tilstedeværelse, der ikke bare formidler et budskab, men som også skaber et positivt aftryk på verden. Vi ønsker at sætte en ny standard for webdesign, der giver genlyd – som et ekko, der spreder sig og inspirerer andre til at vælge løsninger, der er mere skånsomme overfor ressourcerne.
@@ -18,12 +49,14 @@ const OmOs = () => {
         </p>
       </div>
       <div className="image-container">
-        <img src="src/assets/bil5.webp" alt="Om os billede" />
+        <img 
+          src={isDarkMode ? darkModeImage : lightModeImage} 
+          alt="Om os billede" 
+          loading="lazy"
+        />
       </div>
     </section>
   );
 };
 
 export default OmOs;
-
-

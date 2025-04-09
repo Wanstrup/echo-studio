@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HvorforOs.css';
 
+// Importér billeder til light og dark mode
+import lightModeImage from '../assets/bil8.webp';
+import darkModeImage from '../assets/bil7.webp';
+
 const HvorforOs = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Initialt tjek fra localStorage
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setIsDarkMode(storedDarkMode);
+
+    // Tjek ændringer i localStorage (hvis darkmode skiftes fra en anden fane)
+    const handleStorageChange = () => {
+      const currentDarkMode = localStorage.getItem('darkMode') === 'true';
+      setIsDarkMode(currentDarkMode);
+    };
+    window.addEventListener('storage', handleStorageChange);
+
+    // Observer body for class-ændringer (f.eks. når dark mode toggles i samme fane)
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.body.classList.contains('dark-mode'));
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="why-us-container">
       <section className="why-us-section">
@@ -27,10 +58,11 @@ const HvorforOs = () => {
 
       {/* Sektion for billede */}
       <section className="image-section">
-        <img src="/src/assets/bil8.webp" alt="Personlig Service" />
+        <img src={isDarkMode ? darkModeImage : lightModeImage} alt="Om os billede" loading="lazy"/>
       </section>
     </div>
   );
 };
 
 export default HvorforOs;
+ 
