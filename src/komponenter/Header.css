@@ -37,7 +37,9 @@ nav {
 }
 
 .logo {
-  height: 50px;
+  height: 120px;
+  padding: 1.5em;
+  
 }
 
 /* Desktop navigation styles */
@@ -68,7 +70,7 @@ header.light .desktop-nav li a {
 }
 
 header.dark .desktop-nav li a {
-  color: #e1e1e6;
+  color: #fcf6dc;
 }
 
 .desktop-nav li a:hover {
