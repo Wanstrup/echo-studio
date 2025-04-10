@@ -8,10 +8,10 @@ import case4 from '../assets/logo.webp';
 import case5 from '../assets/vwlogo.webp';
 
 const slides = [
-  { image: case1, alt: 'Case 1', title: 'Skor: Projektbeskrivelse 1', link: 'https://skor.nikolineschmidt.dk/' },
-  { image: case3, alt: 'Case 3', title: 'Ne Portefolio: Projektbeskrivelse 3', link: 'https://portfolio.nikolineschmidt.dk/' },
-  { image: case4, alt: 'Case 4', title: 'Sille Portefolio: Projektbeskrivelse 4', link: 'https://portfolio.sgreve.dk/' },
-  { image: case5, alt: 'Case 5', title: 'Villads Portefolio: Projektbeskrivelse 5', link: 'https://portfolio.vwanstrup.dk/' }
+  { image: case1, alt: 'Case 1', title: 'Skor: ', link: 'https://skor.nikolineschmidt.dk/' },
+  { image: case3, alt: 'Case 3', title: 'Nikoline Portefolio: ', link: 'https://portfolio.nikolineschmidt.dk/' },
+  { image: case4, alt: 'Case 4', title: 'Sille Portefolio: ', link: 'https://portfolio.sgreve.dk/' },
+  { image: case5, alt: 'Case 5', title: 'Villads Portefolio: ', link: 'https://portfolio.vwanstrup.dk/' }
 ];
 
 function Slideshow() { 

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column; /* Sørger for, at tekst og billede er stablet vertikalt */
   padding: 16px;
-  text-align: center;
+  
 }
 
 .text-container {
@@ -22,7 +22,7 @@
   font-family: 'Cinzel', serif;  /* Bruger Cinzel font til overskriften */
   font-size: 1.5rem;
   margin-bottom: 8px;
-  text-align: center; /* Centrerer overskriften */
+  text-align: center; /* Centrerer overskriften */  
 }
 
 /* For Vision, Mission og Passion i p-tags */
@@ -52,7 +52,7 @@
 @media (min-width: 768px) {
   .omOs-section {
     flex-direction: column; /* Sørger for at tekst og billede stadig er stablet vertikalt på større skærme */
-    text-align: center;
+    
   }
 
   .text-container h2 {

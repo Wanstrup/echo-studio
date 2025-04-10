@@ -26,7 +26,7 @@
 .last-section {
     display: flex;
     flex-direction: column; /* Standard for at have billede og tekst vertikalt stablet */
-    text-align: center;
+    
     margin-top: 20px;
 }
 
@@ -48,7 +48,7 @@
     /* Sørg for, at billede og tekst er stablet vertikalt på mobile enheder */
     .last-section {
         flex-direction: column;
-        text-align: center;
+
     }
 
     /* Ingen ændring i rækkefølgen - billede nederst */
@@ -78,13 +78,13 @@
     .last-section {
         flex-direction: column; /* Sørg for at billede og tekst er stablet vertikalt */
         justify-content: center;
-        text-align: center;
+        
     }
 }
 
 .image-section {
     margin-top: 30px;      /* Placer billedet med lidt afstand fra de tidligere sektioner */
-    text-align: center;    /* Centrer billedet horisontalt */
+        /* Centrer billedet horisontalt */
   }
   
   .image-section img {
